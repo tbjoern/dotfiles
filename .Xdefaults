@@ -1,0 +1,11 @@
+!URxvt.font: xft:Not Courier Sans:regular:size=13: antialiasing=true,\
+!	xft:Dejavu Sans Mono For Powerline:normal:size=10
+!URxvt.boldFont: xft:Dejavu Sans Mono For Powerline:bold:size=10
+!URxvt.letterSpace: -3
+!URxvt.scrollBar: false
+!Urxvt.cursorBlink: true
+!URxvt.foreground: #FFFFFF
+!URxvt.background: #0F0F0F
+!URxvt.transparent: true
+!URxvt.tintColor: white
+!URxvt.shading: 20
