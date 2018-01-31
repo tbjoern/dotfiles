@@ -24,6 +24,7 @@
 *fadeColor:             S_foreground
 *cursorColor:           S_foreground
 *faceName: DejaVu Sans Mono for Powerline:size=10
+XTerm*selectToClipboard: true
 
 !! black dark/light
 *color8:                S_black_intense

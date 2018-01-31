@@ -13,7 +13,11 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Aliases
 alias ls='ls --color=auto'
+alias open='xdg-open'
+alias make='make -j4'
+alias rspec='rspec --color'
 
 # Arch Wiki recommendation for RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -36,6 +40,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 export EDITOR=vim
 
+# add ccache
+export PATH="/usr/lib/ccache/bin/:$PATH"
+
 #antigen
 source ~/dotfiles/antigen/bin/antigen.zsh
 
@@ -54,4 +61,3 @@ antigen theme agnoster
 # Tell Antigen that you're done.
 antigen apply
 
-alias open=xdg-open
