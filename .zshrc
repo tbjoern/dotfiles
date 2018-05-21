@@ -7,7 +7,7 @@ unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/tbjoern/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
@@ -44,7 +44,7 @@ export EDITOR=vim
 export PATH="/usr/lib/ccache/bin/:$PATH"
 
 #antigen
-source ~/dotfiles/antigen/bin/antigen.zsh
+source ~/.dotfiles/antigen/bin/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
