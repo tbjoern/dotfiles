@@ -43,6 +43,10 @@ export EDITOR=vim
 # add ccache
 export PATH="/usr/lib/ccache/bin/:$PATH"
 
+# pyenv config
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 #antigen
 source ~/.dotfiles/antigen/bin/antigen.zsh
 
