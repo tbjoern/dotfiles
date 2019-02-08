@@ -23,7 +23,7 @@
 *fading:                40
 *fadeColor:             S_foreground
 *cursorColor:           S_foreground
-*faceName: DejaVu Sans Mono for Powerline:size=10
+*faceName: DejaVu Sans Mono for Powerline:size=12
 XTerm*selectToClipboard: true
 
 !! black dark/light
