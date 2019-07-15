@@ -8,33 +8,28 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename "$HOME/.zshrc"
-
-autoload -Uz compinit
+autoload -Uz compinit promptinit
 compinit
+promptinit
+
+# Arch Wiki recommendation for RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
 # End of lines added by compinstall
 
-# Aliases
+# --------------- Aliases --------------- 
+#
 alias ls='ls --color=auto'
 alias open='xdg-open'
 alias make='make -j4'
 alias rspec='rspec --color'
 alias todo='vim $HOME//todo.md'
 
-# Arch Wiki recommendation for RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# --------------- ENV  ------------------
 
+export EDITOR=vim
 
-autoload -Uz compinit promptinit
-compinit
-promptinit
-
-# This will set the default prompt to the walters theme
-# prompt walters
-
-export PATH="$PATH:$HOME/.bin"
-
-# wal autoconfig for new terminals
-#(wal -r &)
+# --------------- PATH ------------------
 
 # add home bin dir to PATH
 export PATH="$PATH:$HOME/bin"
@@ -42,13 +37,11 @@ export PATH="$PATH:$HOME/bin"
 # add ccache
 export PATH="/usr/lib/ccache/bin/:$PATH"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-export EDITOR=vim
-
 # rust
 export PATH="$PATH:$HOME/.cargo/bin"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
 
 # pyenv config
 eval "$(pyenv init -)"
