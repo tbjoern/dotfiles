@@ -1,0 +1,10 @@
+xterm*background: color_background
+xterm*foreground: color_foreground
+xterm*termName: xterm-256color
+
+*fading:                40
+*fadeColor:             color_foreground
+*cursorColor:           color_foreground
+*faceName: DejaVu Sans Mono for Powerline:size=10
+XTerm*selectToClipboard: true
+

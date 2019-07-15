@@ -1,1 +1,3 @@
-#include ".Xdefaults"
+#include ".Xresources.d/clr_purple.var"
+#include ".Xresources.d/apply_colors"
+#include ".Xresources.d/xterm"

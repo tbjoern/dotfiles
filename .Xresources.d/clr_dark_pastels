@@ -1,0 +1,54 @@
+#define S_foreground #dcdccc
+#define S_foreground_faint foreground
+#define S_background #1f1f1f
+#define S_orange_intense	#f0dfaf
+#define S_orange		#dfaf8f
+#define S_red_intense    	#dca3a3
+#define S_red		#705050
+#define S_black_intense   #709080
+#define S_black		#2f2f2f
+#define S_blue    #94bff3
+#define S_blue_intense		#9ab8d7
+#define S_pink_intense	#ec93d3
+#define S_pink		#dc8cc3
+#define S_cyan_intense   	#93e0e3
+#define S_cyan		#8cd0d3
+#define S_green_intense	#72d5a3
+#define S_green		#60b48a
+#define S_white_intense	#ffffff
+#define S_white		#dcdccc
+
+*foreground:		S_foreground
+*background:		S_background
+
+!! black dark/light
+*color8:                S_black_intense
+*color0:                S_black
+
+!! red dark/light
+*color9:                S_red_intense
+*color1:                S_red
+
+!! green dark/light
+*color10:               S_green_intense
+*color2:               	S_green
+
+!! orange dark/light
+*color11:               S_orange_intense
+*color3:               	S_orange
+
+!! blue dark/light
+*color12:               S_blue_intense
+*color4:               	S_blue
+
+!! magenta dark/light
+*color13:               S_pink_intense
+*color5:               	S_pink
+
+!! cyan dark/light
+*color14:               S_cyan_intense
+*color6:               	S_cyan
+
+!! white dark/light
+*color15:               S_white_intense
+*color7:               	S_white
