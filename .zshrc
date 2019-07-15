@@ -47,6 +47,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 export EDITOR=vim
 
+# rust
+export PATH="$PATH:$HOME/.cargo/bin"
+
 # pyenv config
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
@@ -59,6 +62,7 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
+antigen bundle colored-man-pages
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting

@@ -1,0 +1,67 @@
+! --- ~/.Xresources ------------------------------------------------------------
+! ------------------------------------------------------------------------------
+! --- generated with 4bit Terminal Color Scheme Designer -----------------------
+! ------------------------------------------------------------------------------
+! --- http://ciembor.github.com/4bit -------------------------------------------
+! ------------------------------------------------------------------------------
+
+! --- special colors ---
+
+*background: #070815
+*foreground: #d9e6f2
+
+! --- standard colors ---
+
+! black
+*color0: #000000
+
+! bright_black
+*color8: #1f1f1f
+
+! red
+*color2: #aa2461
+
+! bright_red
+*color10: #ca5593
+
+! green
+*color3: #4b8361
+
+! bright_green
+*color11: #7ca293
+
+! yellow
+*color1: #aa8361
+
+! bright_yellow
+*color9: #caa293
+
+! blue
+*color4: #4b24c1
+
+! bright_blue
+*color12: #7c55e0
+
+! magenta
+*color5: #aa24c1
+
+! bright_magenta
+*color13: #ca55e0
+
+! cyan
+*color6: #4b83c1
+
+! bright_cyan
+*color14: #7ca2e0
+
+! white
+*color7: #d9d9d9
+
+! bright_white
+*color15: #ffffff
+
+
+! ------------------------------------------------------------------------------
+! --- end of terminal colors section -------------------------------------------
+! ------------------------------------------------------------------------------
+
