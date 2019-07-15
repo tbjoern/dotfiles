@@ -18,6 +18,7 @@ alias ls='ls --color=auto'
 alias open='xdg-open'
 alias make='make -j4'
 alias rspec='rspec --color'
+alias todo='vim $HOME//todo.md'
 
 # Arch Wiki recommendation for RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -35,13 +36,16 @@ export PATH="$PATH:$HOME/.bin"
 # wal autoconfig for new terminals
 #(wal -r &)
 
+# add home bin dir to PATH
+export PATH="$PATH:$HOME/bin"
+
+# add ccache
+export PATH="/usr/lib/ccache/bin/:$PATH"
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
 export EDITOR=vim
-
-# add ccache
-export PATH="/usr/lib/ccache/bin/:$PATH"
 
 # pyenv config
 eval "$(pyenv init -)"
