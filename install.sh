@@ -16,6 +16,7 @@ ln -s $DOTFILES_DIR/.config $HOME/.config
 ln -s $DOTFILES_DIR/.zshrc $HOME/.zshrc
 ln -s $DOTFILES_DIR/.Xresources $HOME/.Xresources
 ln -s $DOTFILES_DIR/.Xdefaults $HOME/.Xdefaults
+ln -s $DOTFILES_DIR/.Xdefaults.d $HOME/.Xdefaults.d
 ln -s $DOTFILES_DIR/.xinitrc $HOME/.xinitrc
 ln -s $DOTFILES_DIR/.vimrc $HOME/.vimrc
 ln -s $DOTFILES_DIR/.tmux.conf $HOME/.tmux.conf
