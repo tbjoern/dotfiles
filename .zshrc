@@ -1,3 +1,4 @@
+skip_global_compinit=1
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -13,7 +14,7 @@ compinit
 promptinit
 
 # Arch Wiki recommendation for RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # End of lines added by compinstall
 
@@ -24,6 +25,8 @@ alias open='xdg-open'
 alias make='make -j4'
 alias rspec='rspec --color'
 alias todo='vim $HOME//todo.md'
+alias pyenv-init='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
+
 
 # --------------- ENV  ------------------
 
@@ -44,8 +47,7 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # pyenv config
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+alias pyenv-init='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
 
 #antigen
 source ~/.dotfiles/antigen/bin/antigen.zsh
