@@ -18,16 +18,6 @@ promptinit
 
 # End of lines added by compinstall
 
-# --------------- Aliases --------------- 
-#
-alias ls='ls --color=auto'
-alias open='xdg-open'
-alias make='make -j4'
-alias rspec='rspec --color'
-alias todo='vim $HOME//todo.md'
-alias pyenv-init='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
-
-
 # --------------- ENV  ------------------
 
 export EDITOR=vim
@@ -47,6 +37,16 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # pyenv config
+alias pyenv-init='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
+
+# --------------- Aliases --------------- 
+#
+alias ls='ls --color=auto'
+alias open='xdg-open'
+alias make='make -j4'
+alias rspec='rspec --color'
+alias todo='$EDITOR $HOME//todo.md'
+alias today='$EDITOR $HOME/today.md'
 alias pyenv-init='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
 
 #antigen
