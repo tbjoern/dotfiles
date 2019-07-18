@@ -2,8 +2,11 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'jeffkreeftmeijer/vim-dim'
 
 call plug#end()
+
+colorscheme dim
 
 set nocompatible
 
