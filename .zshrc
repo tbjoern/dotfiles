@@ -25,7 +25,7 @@ export EDITOR=vim
 # --------------- PATH ------------------
 
 # add home bin dir to PATH
-export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/.bin"
 
 # add ccache
 export PATH="/usr/lib/ccache/bin/:$PATH"
