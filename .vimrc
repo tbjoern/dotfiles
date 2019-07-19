@@ -17,6 +17,14 @@ set showcmd
 set splitright
 set splitbelow
 
+set expandtab
+set smarttab
+set shiftwidth=4
+set tabstop=4
+
+set autoindent
+set smartindent
+
 syntax enable
 
 map <C-j> <C-W>j
