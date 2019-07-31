@@ -5,14 +5,17 @@ def parse_xresources(lines):
     defines = {}
     for line in lines:
         line = line.strip()
-        if line is "" or line[0] == '!':
+        if line is "" or line[0] == '!' or line[0] == '[':
             continue
         if '#define' in line:
             _, varname, value = [x.strip() for x in line.split()]
             defines[varname] = value
+        elif line[0] == '#':
+            continue
         else:
             token, value = [x.strip() for x in line.split(':', 1)]
             token = token.strip('*')
+            token = token.strip('.')
             resources[token] = value
     return resources, defines
 
