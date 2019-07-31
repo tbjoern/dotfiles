@@ -33,7 +33,7 @@ git submodule update
 
 DOTFILES_DIR=$HOME/.dotfiles
 DEJAVU_FONTS_DIR=$DOTFILES_DIR/fonts/DejaVuSansMono
-declare -a DEJAVU_FONTS=('DejaVu Sans Mono for Powerline.ttf' 'DejaVu Sans Mono Bold for Powerline.ttf')
+declare -a DEJAVU_FONTS=("DejaVu Sans Mono for Powerline.ttf" "DejaVu Sans Mono Bold for Powerline.ttf")
 
 install -dv $HOME/.fonts
 install -dv $DOTFILES_DIR/.config
