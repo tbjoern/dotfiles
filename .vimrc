@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jeffkreeftmeijer/vim-dim'
+Plug 'kien/ctrlp.vim'
 
 call plug#end()
 
@@ -31,4 +32,7 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
+
 
