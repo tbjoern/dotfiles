@@ -4,6 +4,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
 
 call plug#end()
 
@@ -35,4 +37,5 @@ map <C-l> <C-W>l
 
 autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
