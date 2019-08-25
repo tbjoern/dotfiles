@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+for f in $(ls)
+do
+    rename=$(echo $f | sed 's/_/-/g')
+    if [ ! $f = $rename ]
+    then
+        mv $f $rename
+    fi
+done
