@@ -49,6 +49,9 @@ alias todo='$EDITOR $HOME//todo.md'
 alias today='$EDITOR $HOME/today.md'
 alias pyenv-init='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
 
+# -------------- Terminal Settings -----
+stty -ixon
+
 #antigen
 source ~/.dotfiles/antigen/bin/antigen.zsh
 
