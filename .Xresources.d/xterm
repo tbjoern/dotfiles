@@ -8,3 +8,9 @@ xterm*termName: xterm-256color
 *faceName: DejaVu Sans Mono for Powerline:size=12
 XTerm*selectToClipboard: true
 
+*VT100.Translations: #override \
+                <Key>BackSpace: string(0x7F)\n\
+                <Key>Delete:    string("\033[3~")\n\
+                <Key>Home:      string("\033[1~")\n\
+                <Key>End:       string("\033[4~")
+*ttyModes: erase ^?
