@@ -25,7 +25,7 @@ export EDITOR=vim
 # --------------- PATH ------------------
 
 # add home bin dir to PATH
-export PATH="$PATH:$HOME/.bin"
+export PATH="$HOME/.bin:$PATH"
 
 # add ccache
 export PATH="/usr/lib/ccache/bin/:$PATH"
@@ -38,6 +38,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # pyenv config
 alias pyenv-init='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
+eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"
 
 # --------------- Aliases --------------- 
 #
@@ -61,6 +62,8 @@ antigen use oh-my-zsh
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
 antigen bundle colored-man-pages
+antigen bundle docker
+antigen bundle docker-compose
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
