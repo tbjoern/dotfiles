@@ -22,7 +22,7 @@ function link {
 		fi
 	fi		
 	if [[ ! $DRY_RUN = true ]]; then
-		ln -s $1 $2
+		ln -s "$1" "$2"
 	else
 		echo "Linking $1 to $2"
 	fi
