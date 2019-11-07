@@ -6,6 +6,7 @@ Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'kien/ctrlp.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
 call plug#end()
 
@@ -19,6 +20,13 @@ map <Leader>h :set hlsearch!<CR>
 nnoremap <silent> <Leader>t :NERDTree<CR><C-w>l
 noremap <silent> <Leader>cc :norm ^i# <CR>
 noremap <silent> <Leader>cu :norm ^xx<CR>
+nnoremap ; :
+command W w
+command Q q
+command Wq wq
+command WQ wq
+noremap <silent> <Leader>y "+y
+noremap <silent> <Leader>p "+p
 
 " Information
 set number
@@ -51,6 +59,7 @@ syntax enable
 
 " Buffers
 set hidden
+set autoread
 
 " Navigation
 map <C-j> <C-W>j
