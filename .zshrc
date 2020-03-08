@@ -37,8 +37,7 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # pyenv config
-alias pyenv-init='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
-eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"
+#eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"
 
 # --------------- Aliases --------------- 
 #
