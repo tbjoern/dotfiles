@@ -17,3 +17,5 @@ Currently I am using [DejaVu Sans Mono Nerd Font](https://github.com/ryanoasis/n
 ## Helpful tools
 
 Inspect a ttf font: [CharacterMap](http://mathew-kurian.github.io/CharacterMap/)
+
+[Nerd Font cheat sheet](https://www.nerdfonts.com/cheat-sheet)
