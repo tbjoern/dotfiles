@@ -19,3 +19,16 @@ Currently I am using [DejaVu Sans Mono Nerd Font](https://github.com/ryanoasis/n
 Inspect a ttf font: [CharacterMap](http://mathew-kurian.github.io/CharacterMap/)
 
 [Nerd Font cheat sheet](https://www.nerdfonts.com/cheat-sheet)
+
+### Unicode glyphs in XTerm
+
+Previously I was using DejaVu Sans Mono for Powerline. It has basic powerline glyphs patched in, but not more. I wanted to use FontAwesome Glyphs, so I installed ttf-font-awesome (arch). 
+
+I tried to use the Font Awesome font as a secondary font in XTerm, but specifying two fonts yielded the following message from XTerm:
+```
+xterm: too many fonts for fNorm, ignoring Font Awesome
+```
+I searched for what 'fNorm' is supposed to mean, but neither man pages nor google had an answer. I suspect it means that XTerm is unable to merge the fonts or something.
+Using `fc-list :scalable=true:spacing=mono: family` showed that FontAwesome is indeed not mono-spaced by design. That could also be the culprit.
+
+So to fix that I switched to using `DejaVuSansMono Nerd Font Mono`. Now everything works, yay!
