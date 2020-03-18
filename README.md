@@ -7,3 +7,7 @@ Dont forget to init/update the submodules
 
 For xterm to work with the DejaVu fonts, copy `DejaVu Sans Mono for Powerline` and the bold version $HOME/.fonts
 Then run `fc-cache -fv` to update the font cache.
+
+## Font
+
+Currently I am using [DejaVu Sans Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete%20Mono.ttf)
