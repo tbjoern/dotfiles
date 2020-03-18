@@ -14,11 +14,13 @@ Then run `fc-cache -fv` to update the font cache.
 
 Currently I am using [DejaVu Sans Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete%20Mono.ttf)
 
-## Helpful tools
+## Helpful links
 
 Inspect a ttf font: [CharacterMap](http://mathew-kurian.github.io/CharacterMap/)
 
 [Nerd Font cheat sheet](https://www.nerdfonts.com/cheat-sheet)
+
+[Center vertically in polybar](https://github.com/polybar/polybar/issues/478) (useful for icons)
 
 ### Unicode glyphs in XTerm
 
