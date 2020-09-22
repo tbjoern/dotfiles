@@ -21,6 +21,7 @@ promptinit
 # --------------- ENV  ------------------
 
 export EDITOR=vim
+export NOTES_DIR="$HOME/development/personal/notes"
 
 # --------------- PATH ------------------
 
@@ -49,6 +50,44 @@ alias rspec='rspec --color'
 alias todo='$EDITOR $HOME//todo.md'
 alias today='$EDITOR $HOME/today.md'
 alias pyenv-init='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
+alias npm-exec='PATH=$(npm bin):$PATH'
+alias gitc='git checkout'
+alias gitp='git pull'
+alias gitmk='git checkout -b'
+alias gits='git status'
+
+notes_changed() {
+    test -n "$(git status --porcelain)" 
+}
+
+notes() {
+    export GIT_WORK_TREE="$NOTES_DIR"
+    export GIT_DIR="$NOTES_DIR/.git"
+    if [ "$1" = "ls" ]; then
+        if [ "$2" != "" ]; then
+            ls "$NOTES_DIR/$2"
+        else
+            ls "$NOTES_DIR"
+        fi
+         
+    elif [ "$1" = "edit" ]; then
+        vim "$NOTES_DIR/$2"
+        if notes_changed; then
+            git add .
+            git commit
+        fi
+    elif [ "$1" = "sync" ]; then
+        git pull -r
+        if notes_changed; then
+            echo "Merge conflicts in notes, must resolve manually"
+            cd "$NOTES_DIR"
+        else
+            git push
+        fi
+    fi
+    unset GIT_WORK_TREE
+    unset GIT_DIR
+}
 
 # -------------- Terminal Settings -----
 stty -ixon
