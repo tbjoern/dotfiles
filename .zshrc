@@ -48,8 +48,6 @@ alias ls='ls --color=auto'
 alias open='xdg-open'
 alias make='make -j4'
 alias rspec='rspec --color'
-alias todo='$EDITOR $HOME//todo.md'
-alias today='$EDITOR $HOME/today.md'
 alias pyenv-init='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
 alias npm-exec='PATH=$(npm bin):$PATH'
 alias gitc='git checkout'
@@ -89,6 +87,9 @@ notes() {
     unset GIT_WORK_TREE
     unset GIT_DIR
 }
+
+alias todo='notes edit todo.md'
+alias today='notes edit today.md'
 
 # -------------- Terminal Settings -----
 stty -ixon
