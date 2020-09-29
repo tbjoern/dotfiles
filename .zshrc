@@ -27,6 +27,7 @@ export NOTES_DIR="$HOME/development/personal/notes"
 
 # add home bin dir to PATH
 export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # add ccache
 export PATH="/usr/lib/ccache/bin/:$PATH"
