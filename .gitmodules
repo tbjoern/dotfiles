@@ -10,3 +10,6 @@
 [submodule "tools/dmenu"]
 	path = tools/dmenu
 	url = https://git.suckless.org/dmenu
+[submodule "tools/dwm"]
+	path = tools/dwm
+	url = https://git.suckless.org/dwm
