@@ -7,3 +7,12 @@
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "tools/dmenu"]
+	path = tools/dmenu
+	url = https://git.suckless.org/dmenu
+[submodule "tools/dwm"]
+	path = tools/dwm
+	url = https://git.suckless.org/dwm
+[submodule "tools/st"]
+	path = tools/st
+	url = https://git.suckless.org/st

@@ -13,6 +13,8 @@ call plug#end()
 
 set nocompatible
 
+" Key mapping
+
 let mapleader = "`"
 
 map <Leader>h :set hlsearch!<CR>
@@ -52,10 +54,13 @@ set linebreak
 set ignorecase
 set smartcase
 
-" Syntax
+" Syntax and Colors
+set t_Co=16
 set background=dark
 colorscheme dim
 syntax enable
+
+hi colorcolumn ctermbg=8
 
 " Buffers
 set hidden

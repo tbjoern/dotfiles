@@ -1,4 +1,4 @@
-skip_global_compinit=1
+# skip_global_compinit=1
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -8,13 +8,15 @@ unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
+fpath+=$HOME/.zsh/pure
 zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit promptinit
 compinit
 promptinit
-
-# Arch Wiki recommendation for RVM
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+zstyle :prompt:pure:git:dirty color yellow
+zstyle :prompt:pure:path color blue
+zstyle :prompt:pure:prompt:success color green
+prompt pure
 
 # End of lines added by compinstall
 
@@ -40,7 +42,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # pyenv config
 alias pyenv-init='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
-eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"
+#eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"
 
 # --------------- Aliases --------------- 
 #
@@ -95,23 +97,23 @@ alias today='notes edit today.md'
 stty -ixon
 
 #antigen
-source ~/.dotfiles/antigen/bin/antigen.zsh
+# source ~/.dotfiles/antigen/bin/antigen.zsh
 
 # Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+# antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
-antigen bundle colored-man-pages
-antigen bundle docker
-antigen bundle docker-compose
+# antigen bundle git
+# antigen bundle colored-man-pages
+# antigen bundle docker
+# antigen bundle docker-compose
 
 # Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
+# antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen theme agnoster
+# antigen theme agnoster
 
 # Tell Antigen that you're done.
-antigen apply
+# antigen apply
 
