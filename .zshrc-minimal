@@ -13,12 +13,24 @@ zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit promptinit
 compinit
 promptinit
+# End of lines added by compinstall
+
+# Case insensitive matching when no results found
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+
+# syntax highlighting
+if [ -d $HOME/.zsh/zsh-syntax-highlighting ]; then
+    source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+    echo "Syntax highlighting not installed"
+fi
+
+# --------------- Pure Prompt -----------
+#
 zstyle :prompt:pure:git:dirty color yellow
 zstyle :prompt:pure:path color blue
 zstyle :prompt:pure:prompt:success color green
 prompt pure
-
-# End of lines added by compinstall
 
 # --------------- ENV  ------------------
 
@@ -52,10 +64,12 @@ alias make='make -j4'
 alias rspec='rspec --color'
 alias pyenv-init='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
 alias npm-exec='PATH=$(npm bin):$PATH'
+alias sound='alsamixer'
 alias gitc='git checkout'
 alias gitp='git pull'
 alias gitmk='git checkout -b'
 alias gits='git status'
+alias gitd='git diff --color=always | less -r'
 
 notes_changed() {
     test -n "$(git status --porcelain)" 
