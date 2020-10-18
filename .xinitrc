@@ -39,7 +39,7 @@ fi
 while xsetroot -name "$WIFI $BATTERY⚡ $DATETIME"
 do
     DATETIME=$(date "+%d.%m.%y %H:%M")
-    WIFI=$(nmcli con show --active | awk 'NR>1 /connected/ { print $1 }')
+    WIFI=$(nmcli --fields name,state con show --active | awk 'NR>1 &&/activated/ { print $1 }')
     BATTERY=$(acpi -b | awk -F, '{ gsub(/ /, "", $2); gsub(/%/, "", $2); print $2 }')
     sleep 1
 done &
