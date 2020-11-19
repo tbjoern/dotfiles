@@ -52,7 +52,6 @@ link $DOTFILES_DIR/.vimrc $HOME/.vimrc
 link $DOTFILES_DIR/.tmux.conf $HOME/.tmux.conf
 link $DOTFILES_DIR/.tmux/plugins/tpm $HOME/.tmux/plugins/tpm
 link $DOTFILES_DIR/.zshenv $HOME/.zshenv
-link $DOTFILES_DIR/.dwm-session $HOME/.dwm-session
 link $DOTFILES_DIR/.emacs $HOME/.emacs
 
 for font in "${DEJAVU_FONTS[@]}"; do
