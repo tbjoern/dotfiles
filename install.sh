@@ -54,6 +54,10 @@ link $DOTFILES_DIR/.tmux/plugins/tpm $HOME/.tmux/plugins/tpm
 link $DOTFILES_DIR/.zshenv $HOME/.zshenv
 link $DOTFILES_DIR/.emacs $HOME/.emacs
 
+install -m 744 -d $HOME/.zsh
+git clone https://github.com/zsh-users/zsh-syntax-highlighting $HOME/.zsh/zsh-syntax-highlighting
+git clone https://github.com/sindresorhus/pure $HOME/.zsh/pure
+
 for font in "${DEJAVU_FONTS[@]}"; do
     link "$DEJAVU_FONTS_DIR/$font" "$HOME/.fonts/$font"
 done
