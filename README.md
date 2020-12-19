@@ -10,6 +10,13 @@ Dont forget to init/update the submodules
 For xterm to work with the DejaVu fonts, copy `DejaVu Sans Mono for Powerline` and the bold version $HOME/.fonts
 Then run `fc-cache -fv` to update the font cache.
 
+## Installation
+
+### Desktop Environment
+
+Make sure to set `DMENU_PATH` to contain all directories with executables that should be available in `dmenu`.
+Set this variable in your `.zshenv`.
+
 ## Font
 
 Currently I am using [DejaVu Sans Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete%20Mono.ttf)
@@ -34,3 +41,4 @@ I searched for what 'fNorm' is supposed to mean, but neither man pages nor googl
 Using `fc-list :scalable=true:spacing=mono: family` showed that FontAwesome is indeed not mono-spaced by design. That could also be the culprit.
 
 So to fix that I switched to using `DejaVuSansMono Nerd Font Mono`. Now everything works, yay!
+
