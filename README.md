@@ -42,3 +42,20 @@ Using `fc-list :scalable=true:spacing=mono: family` showed that FontAwesome is i
 
 So to fix that I switched to using `DejaVuSansMono Nerd Font Mono`. Now everything works, yay!
 
+## Keyboard Shortcuts Cheat Sheet
+
+### DWM
+
+Modifier Key (M) = Windows Key
+Shift (S)
+Ctrl (C)
+
+M-Space: dmenu launcher
+M-Return: terminal
+M-b: toggle statusbar
+M-S-c: close window
+M-S-q: Quit DWM
+M-, M-.: Switch monitor
+M-j, M-k: Switch window
+M-h, M-l: Resize master/slave window area
+
