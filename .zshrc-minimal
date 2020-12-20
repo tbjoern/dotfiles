@@ -110,6 +110,29 @@ alias today='notes edit today.md'
 # -------------- Terminal Settings -----
 stty -ixon
 
+
+# -------------- TTY Colors  -----
+#
+if [ "$TERM" = "linux" ]; then
+    echo -en "\e]P01f1f1f" #black
+    echo -en "\e]P8505050" #darkgrey
+    echo -en "\e]P1b33f52" #darkred
+    echo -en "\e]P9b33f52" #red
+    echo -en "\e]P272b165" #darkgreen
+    echo -en "\e]PA72b165" #green
+    echo -en "\e]P3d7d957" #brown
+    echo -en "\e]PBd7d957" #yellow
+    echo -en "\e]P4576aca" #darkblue
+    echo -en "\e]PC576aca" #blue
+    echo -en "\e]P5b757ca" #darkmagenta
+    echo -en "\e]PDb757ca" #magenta
+    echo -en "\e]P657cab7" #darkcyan
+    echo -en "\e]PE57cab7" #cyan
+    echo -en "\e]P7e7e7e7" #lightgrey
+    echo -en "\e]PFFFFFFF" #white
+    clear #for background artifacting
+fi
+
 #antigen
 # source ~/.dotfiles/antigen/bin/antigen.zsh
 
