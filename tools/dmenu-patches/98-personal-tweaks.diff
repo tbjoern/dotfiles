@@ -48,8 +48,8 @@ index 3a7cda7..3316dce 100755
  IFS=:
 -if stest -dqr -n "$cache" $PATH; then
 -	stest -flx $PATH | sort -u | tee "$cache"
-+if stest -dqr -n "$cache" $DMENU_PATH; then
-+	stest -flx $DMENU_PATH | sort -u | tee "$cache"
++if stest -adqr -n "$cache" $DMENU_PATH; then
++	stest -aflx $DMENU_PATH | sort -u | tee "$cache"
  else
  	cat "$cache"
  fi
