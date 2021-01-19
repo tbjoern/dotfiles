@@ -16,3 +16,6 @@
 [submodule "tools/st"]
 	path = tools/st
 	url = https://git.suckless.org/st
+[submodule "tools/xkblayout-state"]
+	path = tools/xkblayout-state
+	url = https://github.com/nonpop/xkblayout-state.git
