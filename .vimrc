@@ -30,6 +30,9 @@ command WQ wq
 noremap <silent> <Leader>y "+y
 noremap <silent> <Leader>p "+p
 
+" Clipboard
+set clipboard=unnamedplus
+
 " Information
 set number
 set showcmd
