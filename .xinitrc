@@ -32,18 +32,22 @@ fi
  # unset f
 # fi
 
+redshift &
+
+setxkbmap -option "grp:rctrl_toggle"
+
 if [ -f $HOME/.screens ] ; then
     source $HOME/.screens
 fi
 
-while xsetroot -name "$WIFI $BATTERY⚡ $DATETIME"
+while xsetroot -name "$KBMAP $WIFI $DATETIME"
 do
     DATETIME=$(date "+%d.%m.%y %H:%M")
     WIFI=$(nmcli --fields name,state con show --active | awk 'NR>1 &&/activated/ { print $1 }')
-    BATTERY=$(acpi -b | awk -F, '{ gsub(/ /, "", $2); gsub(/%/, "", $2); print $2 }')
+    KBMAP=$(xkblayout-state print %s || echo "xkblayout-state not installed")
     sleep 1
 done &
 
-feh --bg-scale ~/Pictures/wallpaper.jpg
+feh --bg-scale ~/Pictures/wallpaper.png
 
 exec dwm
