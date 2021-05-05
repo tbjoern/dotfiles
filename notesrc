@@ -37,5 +37,9 @@ notes() {
     unset GIT_DIR
 }
 
+inbox() {
+    echo $1 >> $NOTES_DIR/inbox.org
+}
+
 alias todo='notes edit todo.org'
 alias today='notes edit today.md'
