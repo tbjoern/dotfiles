@@ -36,6 +36,7 @@ prompt pure
 
 export EDITOR=vim
 export NOTES_DIR="$HOME/development/personal/notes"
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # --------------- PATH ------------------
 
