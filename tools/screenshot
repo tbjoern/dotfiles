@@ -1,0 +1,2 @@
+#! /bin/bash
+xwd -id $(xwininfo -int | grep "Window id" | awk "{print \$4}") | convert xwd:- png:- | xclip -selection clipboard -t image/png -i
