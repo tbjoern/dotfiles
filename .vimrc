@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'jeffkreeftmeijer/vim-dim'
+Plug 'jeffkreeftmeijer/vim-dim', { 'branch': 'main' }
 Plug 'kien/ctrlp.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
