@@ -23,6 +23,10 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
+if [ -f $HOME/.xinitrc-local ] ; then
+    source $HOME/.xinitrc-local
+fi
+
 # start some nice programs
 
 # if [ -d /etc/X11/xinit/xinitrc.d ] ; then
@@ -36,18 +40,26 @@ redshift &
 
 setxkbmap -option "grp:rctrl_toggle"
 
-if [ -f $HOME/.screens ] ; then
-    source $HOME/.screens
-fi
-
-while xsetroot -name "$KBMAP $WIFI $DATETIME"
+while xsetroot -name "$KBMAP $WIFI $BATTERY $DATETIME"
 do
     DATETIME=$(date "+%d.%m.%y %H:%M")
     WIFI=$(nmcli --fields name,state con show --active | awk 'NR>1 &&/activated/ { print $1 }')
     KBMAP=$(xkblayout-state print %s || echo "xkblayout-state not installed")
+    if [ -n "$SHOW_BATTERY" ]; then
+        BATTERY=$(acpi -b | awk -F, '{ gsub(/ /, "", $2); gsub(/%/, "", $2); print $2 }')
+    else
+        BATTERY=
+    fi
     sleep 1
 done &
 
-feh --bg-scale ~/Pictures/wallpaper.png
+if [ -f ~/Pictures/wallpaper.jpg ]
+then
+    WALLPAPER=~/Pictures/wallpaper.jpg
+else
+    WALLPAPER=~/Pictures/wallpaper.png
+fi
+
+feh --bg-scale $WALLPAPER
 
 exec dwm
