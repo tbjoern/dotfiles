@@ -30,6 +30,8 @@ command WQ wq
 noremap <silent> <Leader>y "+y
 noremap <silent> <Leader>p "+p
 
+set pastetoggle=<F3>
+
 " Clipboard
 set clipboard=unnamedplus
 
