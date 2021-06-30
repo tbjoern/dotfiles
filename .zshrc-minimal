@@ -25,6 +25,10 @@ else
     echo "Syntax highlighting not installed"
 fi
 
+if [ -f "$HOME/.zshrc-local" ]; then
+    source "$HOME/.zshrc-local"
+fi
+
 # --------------- Pure Prompt -----------
 #
 zstyle :prompt:pure:git:dirty color yellow
@@ -35,7 +39,6 @@ prompt pure
 # --------------- ENV  ------------------
 
 export EDITOR=vim
-export NOTES_DIR="$HOME/development/personal/notes"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # --------------- PATH ------------------
@@ -55,7 +58,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # pyenv config
 alias pyenv-init='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
-eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"
 
 # --------------- Aliases --------------- 
 #
