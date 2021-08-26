@@ -30,6 +30,14 @@ command WQ wq
 noremap <silent> <Leader>y "+y
 noremap <silent> <Leader>p "+p
 
+" delete without yanking
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
+" replace currently selected text with default register
+" without yanking it
+vnoremap <leader>p "_dP
+
 set pastetoggle=<F3>
 
 " Clipboard
