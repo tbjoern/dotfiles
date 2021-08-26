@@ -36,6 +36,10 @@ fi
  # unset f
 # fi
 
+if which compton; then
+    compton &
+fi
+
 redshift &
 
 setxkbmap -option "grp:rctrl_toggle"
