@@ -25,9 +25,6 @@ else
     echo "Syntax highlighting not installed"
 fi
 
-if [ -f "$HOME/.zshrc-local" ]; then
-    source "$HOME/.zshrc-local"
-fi
 
 # --------------- Pure Prompt -----------
 #
@@ -124,3 +121,6 @@ fi
 # Tell Antigen that you're done.
 # antigen apply
 
+if [ -f "$HOME/.zshrc-local" ]; then
+    source "$HOME/.zshrc-local"
+fi
