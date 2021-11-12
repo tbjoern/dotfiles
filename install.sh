@@ -19,7 +19,9 @@ function link {
 		if [[ ! (("$overwrite" = "y") || ("$overwrite" = "Y")) ]]; then
 			echo "Skipping $2"
 			return 0
-		fi
+        else
+            rm "$2"
+        fi
 	fi		
 	if [[ ! $DRY_RUN = true ]]; then
 		ln -s "$1" "$2"
