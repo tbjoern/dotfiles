@@ -44,15 +44,21 @@ redshift &
 
 setxkbmap -option "grp:rctrl_toggle"
 
-while xsetroot -name "$KBMAP $WIFI $BATTERY $DATETIME"
+while xsetroot -name "$KBMAP $WIFI $BATTERY$BATTERY_CHARGING $DATETIME"
 do
     DATETIME=$(date "+%d.%m.%y %H:%M")
     WIFI=$(nmcli --fields name,state con show --active | awk 'NR>1 &&/activated/ { print $1 }')
     KBMAP=$(xkblayout-state print %s || echo "xkblayout-state not installed")
     if [ -n "$SHOW_BATTERY" ]; then
         BATTERY=$(acpi -b | awk -F, '{ gsub(/ /, "", $2); gsub(/%/, "", $2); print $2 }')
+        if acpi -b | grep Charging; then
+            BATTERY_CHARGING="+"
+        else
+            BATTERY_CHARGING=
+        fi
     else
         BATTERY=
+        BATTERY_CHARGING=
     fi
     sleep 1
 done &
