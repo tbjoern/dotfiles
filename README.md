@@ -17,6 +17,15 @@ Then run `fc-cache -fv` to update the font cache.
 Make sure to set `DMENU_PATH` to contain all directories with executables that should be available in `dmenu`.
 Set this variable in your `.zshenv`.
 
+### Slock
+
+```bash
+sudo groupadd nogroup
+sudo chown root ~/.local/bin/slock
+sudo chgrp root ~/.local/bin/slock
+sudo chmod +s ~/.local/bin/slock
+```
+
 ## Font
 
 Currently I am using [DejaVu Sans Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete%20Mono.ttf)
