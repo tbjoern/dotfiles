@@ -36,8 +36,8 @@ fi
  # unset f
 # fi
 
-if which compton; then
-    compton &
+if which picom; then
+    picom --no-fade-openclose &
 fi
 
 redshift &
