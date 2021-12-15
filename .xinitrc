@@ -70,6 +70,6 @@ else
     WALLPAPER=~/Pictures/wallpaper.png
 fi
 
-feh --bg-scale $WALLPAPER
+feh --bg-fill $WALLPAPER
 
 exec dwm
