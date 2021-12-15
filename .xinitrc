@@ -42,7 +42,7 @@ fi
 
 redshift &
 
-setxkbmap -option "grp:rctrl_toggle"
+setxkbmap -layout us -variant altgr-intl -option "grp:rctrl_toggle"
 
 while xsetroot -name "$KBMAP $WIFI $BATTERY$BATTERY_CHARGING $DATETIME"
 do
