@@ -70,6 +70,7 @@ alias gitp='git pull'
 alias gitmk='git checkout -b'
 alias gits='git status'
 alias gitd='git diff --color=always | less -r'
+alias clipin='xclip -i -sel clip'
 calc() { printf "%s\n" "$*" | bc -l } 
 
 source ~/.dotfiles/notesrc
