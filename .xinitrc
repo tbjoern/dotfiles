@@ -42,12 +42,13 @@ fi
 
 redshift &
 
-setxkbmap -layout us -variant altgr-intl -option "grp:rctrl_toggle"
+setxkbmap -layout us -variant altgr-intl -option "grp:rctrl_toggle" -option caps:escape
 
 while xsetroot -name "$KBMAP $WIFI $BATTERY$BATTERY_CHARGING $DATETIME"
 do
     DATETIME=$(date "+%d.%m.%y %H:%M")
-    WIFI=$(nmcli --fields name,state con show --active | awk 'NR>1 &&/activated/ { print $1 }')
+    #WIFI=$(nmcli --fields name,state con show --active | awk 'NR>1 &&/activated/ { print $1 }')
+    WIFI=$(nmcli --fields name,state con show --active | awk -v d="|" 'NR>1 &&/activated/ { $(NF--); s=(NR==2?s:s d)$0}END{print s }')
     KBMAP=$(xkblayout-state print %s || echo "xkblayout-state not installed")
     if [ -n "$SHOW_BATTERY" ]; then
         BATTERY=$(acpi -b | awk -F, '{ gsub(/ /, "", $2); gsub(/%/, "", $2); print $2 }')
