@@ -27,7 +27,7 @@ fi
 
 
 # --------------- Pure Prompt -----------
-#
+
 zstyle :prompt:pure:git:dirty color yellow
 zstyle :prompt:pure:path color blue
 zstyle :prompt:pure:prompt:success color green
@@ -53,16 +53,12 @@ export PATH="$PATH:$HOME/.cargo/bin"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-# pyenv config
-alias pyenv-init='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
-
 # --------------- Aliases --------------- 
 #
 alias ls='ls --color=auto'
 alias open='xdg-open'
 alias make='make -j4'
 alias rspec='rspec --color'
-alias pyenv-init='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
 alias npm-exec='PATH=$(npm bin):$PATH'
 alias sound='alsamixer'
 alias gitc='git checkout'
@@ -72,6 +68,7 @@ alias gits='git status'
 alias gitd='git diff --color=always | less -r'
 alias clipin='xclip -i -sel clip'
 calc() { printf "%s\n" "$*" | bc -l } 
+alias desktop="startx"
 
 source ~/.dotfiles/notesrc
 
