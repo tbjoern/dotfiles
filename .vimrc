@@ -91,3 +91,8 @@ autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
+" disable bells
+set noeb
+set vb
+set t_vb=
+
