@@ -22,7 +22,6 @@ map <Leader>h :set hlsearch!<CR>
 nnoremap <silent> <Leader>t :NERDTree<CR><C-w>l
 noremap <silent> <Leader>cc :norm ^i# <CR>
 noremap <silent> <Leader>cu :norm ^xx<CR>
-nnoremap ; :
 command W w
 command Q q
 command Wq wq
