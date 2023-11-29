@@ -70,6 +70,8 @@ alias clipin='xclip -i -sel clip'
 calc() { printf "%s\n" "$*" | bc -l } 
 alias desktop="startx"
 
+alias journal="vim ~/.ios-notes/journal.md"
+
 source ~/.dotfiles/notesrc
 
 # -------------- Terminal Settings -----
