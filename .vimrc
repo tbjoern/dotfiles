@@ -40,7 +40,11 @@ vnoremap <leader>p "_dP
 set pastetoggle=<F3>
 
 " Clipboard
-set clipboard=unnamedplus
+if system('uname -s') == "Darwin\n"
+  set clipboard=unnamed "OSX
+else
+  set clipboard=unnamedplus "Linux
+endif
 
 " Information
 set number
