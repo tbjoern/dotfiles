@@ -56,8 +56,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # --------------- Aliases --------------- 
 #
 alias ls='ls --color=auto'
-alias open='xdg-open'
-alias make='make -j4'
 alias rspec='rspec --color'
 alias npm-exec='PATH=$(npm bin):$PATH'
 alias sound='alsamixer'
